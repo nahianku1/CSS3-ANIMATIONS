@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+    /* border: 1px solid red; */
+}
+
+body {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #e0e0e0;
+}
+
+.wrapper {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: #e0e0e0;
+    box-shadow: inset -5px 5px 10px #8b8b8b,
+        inset 5px -5px 10px #ffffff;
+
+}
+
+.dice {
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.number {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    text-align: center;
+    border-radius: 50%;
+    padding: 15px;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.number12 {
+    transform: rotate(0);
+}
+
+.number1 {
+    transform: rotate(30deg);
+}
+
+.number2 {
+    transform: rotate(60deg);
+}
+
+.number3 {
+    transform: rotate(90deg);
+    
+}
+
+.number4 {
+    transform: rotate(1200deg);
+}
+
+.number5 {
+    transform: rotate(150deg);
+}
+
+.number6 {
+    transform: rotate(180deg);
+}
+
+.number7 {
+    transform: rotate(210deg);
+}
+
+.number8 {
+    transform: rotate(240deg);
+}
+
+.number9 {
+    transform: rotate(270deg);
+}
+
+.number10 {
+    transform: rotate(300deg);
+}
+
+.number11 {
+    transform: rotate(330deg);
+}
+
+.dice::after {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.dice .hour,
+.minute,
+.second {
+    background-color: black;
+    position: absolute;
+    top: var(--top);
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(var(--rotate));
+    transform-origin: bottom;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.dice .hour {
+    --rotate:120deg;
+    width: 10px;
+    height: 60px;
+    --top:30%;
+    background-color: black;
+
+}
+
+.dice .minute {
+    --rotate:70deg;
+    width: 6px;
+    height: 80px;
+    --top:23%;
+    background-color: black;
+
+}
+
+.dice .second {
+    --rotate:230deg;
+    width: 6px;
+    height: 110px;
+    --top:14%;
+    background-color: black;
+
+}
+
